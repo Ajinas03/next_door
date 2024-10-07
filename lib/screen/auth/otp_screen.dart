@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:next_door/screen/auth/otp_screen.dart';
 import 'package:next_door/screen/common_widgets/text_widget.dart';
+import 'package:next_door/screen/home/home_screen.dart';
 import 'package:next_door/utils/screen_utils.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+class OtpScreen extends StatelessWidget {
+  const OtpScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,7 @@ class LoginScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: TextWidget(
                 fontSize: 20,
-                text:
-                    "LogIn\nWelcome to NEXT DOOR\nExplore what your neighbours are making",
+                text: "Verify your OTP to get started",
                 textAlign: TextAlign.start,
               ),
             ),
@@ -28,8 +27,7 @@ class LoginScreen extends StatelessWidget {
             ),
             const TextField(
               decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  hintText: "(+91) Enter your mobile number"),
+                  border: OutlineInputBorder(), hintText: "Enter your OTP"),
             ),
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 10),
@@ -38,9 +36,9 @@ class LoginScreen extends StatelessWidget {
                 width: size(context).width / 2,
                 child: FloatingActionButton.extended(
                     onPressed: () {
-                      pushScreen(context, const OtpScreen());
+                      pushScreen(context, const HomeScreen());
                     },
-                    label: const TextWidget(text: "Get OTP")),
+                    label: const TextWidget(text: "Verify OTP")),
               ),
             )
           ],
