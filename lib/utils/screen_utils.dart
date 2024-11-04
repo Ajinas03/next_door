@@ -5,5 +5,5 @@ pushScreen(context, widget) {
 }
 
 Size size(context) {
-  return MediaQuery.of(context).size;
+  return MediaQuery.sizeOf(context);
 }
