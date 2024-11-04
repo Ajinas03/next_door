@@ -1,6 +1,11 @@
 part of 'navigation_bloc.dart';
 
-@immutable
-sealed class NavigationState {}
+final class NavigationInitial extends NavigationState {
+  NavigationInitial() : super(currentScreen: 0);
+}
 
-final class NavigationInitial extends NavigationState {}
+class NavigationState {
+  int currentScreen;
+
+  NavigationState({required this.currentScreen});
+}
